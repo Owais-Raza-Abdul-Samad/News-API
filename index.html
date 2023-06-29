@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script defer src="app.js"></script>
+    <script defer src="bootstrap.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-main">
+    <div class="container-lg">
+      <!-- <h1 class="navbar-brand nav-title">اخبار</h1> -->
+      <img class="nav-title" src="images/nav-title.png" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto me-auto">
+          <li class="nav-item nav-pages">
+            <a class="nav-link" aria-current="page" href="javascript:void(0);">HOME</a>
+          </li>
+          <li class="nav-item nav-pages">
+            <a class="nav-link" href="javascript:void(0);">REVIEWS</a>
+          </li>
+          <li class="nav-item nav-pages">
+            <a class="nav-link" href="javascript:void(0);">DAILY NEWS</a>
+          </li>
+          <li class="nav-item nav-pages">
+            <a class="nav-link" href="javascript:void(0);">FEATURES</a>
+          </li>
+        </ul>
+        <button class="nav-btn">CONTACT US</button>
+      </div>
+    </div>
+  </nav>
+  <section class="search-and-category-section mt-2 container-lg">
+    <label class="search-bar-wrapper">
+      <input type="text" class="search-bar" placeholder="SEARCH...">
+      <img class="search-bar-icon" src="images/search-bar-icon.png" alt="">
+    </label>
+    <div class="filter-categories">
+      <h3 id="filter-s" onclick="searchNews('sports')">SPORTS</h3>
+      <h3 id="filter-p" onclick="searchNews('politics')">POLITICAL</h3>
+      <h3 id="filter-e" onclick="searchNews('environment')">ENVIRONMENT</h3>
+      <h3 id="filter-m" onclick="searchNews('music')">MUSIC</h3>
+      <h3 id="filter-a" onclick="searchNews('academic')">ACADEMIC</h3>
+      <h3 id="filter-f" onclick="searchNews('economy')">FINANCIAL</h3>
+    </div>
+  </section>
+  <main class="news-area container-lg mt-3">
+    <section class="news-headline">
+      <hr>
+      <span id="news-headline">TRENDING</span>
+      <hr>
+    </section>
+    <section class="news-display-area mt-3 mb-4">
+      <div class="card-container container row">
+      </div>
+    </section>
+    <section class="pagination-wrapper container-lg mb-4">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);" aria-label="Previous" id="previous-page">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);" id="page-num">1</a></li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0);" aria-label="Next" id="next-page">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </main>
+</body>
+
+</html>
